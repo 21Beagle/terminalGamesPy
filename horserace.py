@@ -6,9 +6,8 @@ names = ["Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James", "Aarron", 
 adjectives = ["aback","abaft","abandoned","abashed","aberrant","abhorrent","abiding","abject","ablaze","able","abnormal","aboard","aboriginal","abortive","abounding","abrasive","abrupt","absent","absorbed","absorbing","abstracted","absurd","abundant","abusive","acceptable","accessible","accidental","accurate","acid","acidic","acoustic","acrid","actually","ad","hoc","adamant","adaptable","addicted","adhesive","adjoining","adorable","adventurous","afraid","aggressive","agonizing","agreeable","ahead","ajar","alcoholic","alert","alike","alive","alleged","alluring","aloof","amazing","ambiguous","ambitious","amuck","amused","amusing","ancient","angry","animated","annoyed","annoying","anxious","apathetic","aquatic","aromatic","arrogant","ashamed","aspiring","assorted","astonishing","attractive","auspicious","automatic","available","average","awake","aware","awesome","awful","axiomatic","bad","barbarous","bashful","bawdy","beautiful","befitting","belligerent","beneficial","bent","berserk","best","better","bewildered","big","billowy","bite-sized","bitter","bizarre","black","black-and-white","bloody","blue","blue-eyed","blushing","boiling","boorish","bored","boring","bouncy","boundless","brainy","brash","brave","brawny","breakable","breezy","brief","bright","bright","broad","broken","brown","bumpy","burly","bustling","busy","cagey","calculating","callous","calm","capable","capricious","careful","careless","caring","cautious","ceaseless","certain","changeable","charming","cheap","cheerful","chemical","chief","childlike","chilly","chivalrous","chubby","chunky","clammy","classy","clean","clear","clever","cloistered","cloudy","closed","clumsy","cluttered","coherent","cold","colorful","colossal","combative","comfortable","common","complete","complex","concerned","condemned","confused","conscious","cooing","cool","cooperative","coordinated","courageous","cowardly","crabby","craven","crazy","creepy","crooked","crowded","cruel","cuddly","cultured","cumbersome","curious","curly","curved","curvy","cut","cute","cute","cynical","daffy","daily","damaged","damaging","damp","dangerous","dapper","dark","dashing","dazzling","dead","deadpan","deafening","dear","debonair","decisive","decorous","deep","deeply","defeated","defective","defiant","delicate","delicious","delightful","demonic","delirious","dependent","depressed","deranged","descriptive","deserted","detailed","determined","devilish","didactic","different","difficult","diligent","direful","dirty","disagreeable","disastrous","discreet","disgusted","disgusting","disillusioned","dispensable","distinct","disturbed","divergent","dizzy","domineering","doubtful","drab","draconian","dramatic","dreary","drunk","dry","dull","dusty","dynamic","dysfunctional","eager","early","earsplitting","earthy","easy","eatable","economic","educated","efficacious","efficient","eight","elastic","elated","elderly","electric","elegant","elfin","elite","embarrassed","eminent","empty","enchanted","enchanting","encouraging","endurable","energetic","enormous","entertaining","enthusiastic","envious","equable","equal","erect","erratic","ethereal","evanescent","evasive","even excellent excited","exciting exclusive","exotic","expensive","extra-large extra-small exuberant","exultant","fabulous","faded","faint fair","faithful","fallacious","false familiar famous","fanatical","fancy","fantastic","far"," far-flung"," fascinated","fast","fat faulty","fearful fearless","feeble feigned","female fertile","festive","few fierce","filthy","fine","finicky","first","five"," fixed"," flagrant","flaky","flashy","flat","flawless","flimsy"," flippant","flowery","fluffy","fluttering"," foamy","foolish","foregoing","forgetful","fortunate","four frail","fragile","frantic","free"," freezing"," frequent"," fresh"," fretful","friendly","frightened frightening full fumbling functional","funny","furry furtive","future futuristic","fuzzy ","gabby","gainful","gamy","gaping","garrulous","gaudy","general gentle","giant","giddy","gifted","gigantic","glamorous","gleaming","glib","glistening glorious","glossy","godly","good","goofy","gorgeous","graceful","grandiose","grateful gratis","gray greasy great","greedy","green grey grieving","groovy","grotesque","grouchy","grubby gruesome","grumpy","guarded","guiltless","gullible gusty","guttural H habitual","half","hallowed","halting","handsome","handsomely","handy","hanging","hapless","happy","hard","hard-to-find","harmonious","harsh","hateful","heady","healthy","heartbreaking","heavenly heavy hellish","helpful","helpless","hesitant","hideous high","highfalutin","high-pitched","hilarious","hissing","historical","holistic","hollow","homeless","homely","honorable","horrible","hospitable","hot huge","hulking","humdrum","humorous","hungry","hurried","hurt","hushed","husky","hypnotic","hysterical","icky","icy","idiotic","ignorant","ill","illegal","ill-fated","ill-informed","illustrious","imaginary","immense","imminent","impartial","imperfect","impolite","important","imported","impossible","incandescent","incompetent","inconclusive","industrious","incredible","inexpensive","infamous","innate","innocent","inquisitive","insidious","instinctive","intelligent","interesting","internal","invincible","irate","irritating","itchy","jaded","jagged","jazzy","jealous","jittery","jobless","jolly","joyous","judicious","juicy","jumbled","jumpy","juvenile","kaput","keen","kind","kindhearted","kindly","knotty","knowing","knowledgeable","known","labored","lackadaisical","lacking","lame","lamentable","languid","large","last","late","laughable","lavish","lazy","lean","learned","left","legal","lethal","level","lewd","light","like","likeable","limping","literate","little","lively","lively","living","lonely","long","longing","long-term","loose","lopsided","loud","loutish","lovely","loving","low","lowly","lucky","ludicrous","lumpy","lush","luxuriant","lying","lyrical","macabre","macho","maddening","madly","magenta","magical","magnificent","majestic","makeshift","male","malicious","mammoth","maniacal","many","marked","massive","married","marvelous","material","materialistic","mature","mean","measly","meaty","medical","meek","mellow","melodic","melted","merciful","mere","messy","mighty","military","milky","mindless","miniature","minor","miscreant","misty","mixed","moaning","modern","moldy","momentous","motionless","mountainous","muddled","mundane","murky","mushy","mute","mysterious","naive","nappy","narrow","nasty","natural","naughty","nauseating","near","neat","nebulous","necessary","needless","needy","neighborly","nervous","new","next","nice","nifty","nimble","nine","nippy","noiseless","noisy","nonchalant","nondescript","nonstop","normal","nostalgic","nosy","noxious","null","numberless","numerous","nutritious","nutty","oafish","obedient","obeisant","obese","obnoxious","obscene","obsequious","observant","obsolete","obtainable","oceanic","odd","offbeat","old","old-fashioned","omniscient","one","onerous","open","opposite","optimal","orange","ordinary","organic","ossified","outgoing","outrageous","outstanding","oval","overconfident","overjoyed","overrated","overt","overwrought","painful","painstaking","pale","paltry","panicky","panoramic","parallel","parched","parsimonious","past","pastoral","pathetic","peaceful","penitent","perfect","periodic","permissible","perpetual","petite","petite","phobic","physical","picayune","pink","piquant","placid","plain","plant","plastic","plausible","pleasant","plucky","pointless","poised","polite","political","poor","possessive","possible","powerful","precious","premium","present","pretty","previous","pricey","prickly","private","probable","productive","profuse","protective","proud","psychedelic","psychotic","public","puffy","pumped","puny","purple","purring","pushy","puzzled","puzzling","quack","quaint","quarrelsome","questionable","quick","quickest","quiet","quirky","quixotic","quizzical","rabid","racial","ragged","rainy","rambunctious","rampant","rapid","rare","raspy","ratty","ready","real","rebel","receptive","recondite","red","redundant","reflective","regular","relieved","remarkable","reminiscent","repulsive","resolute","resonant","responsible","rhetorical","rich","right","righteous","rightful","rigid","ripe","ritzy","roasted","robust","romantic","roomy","rotten","rough","round","royal","ruddy","rude","rural","rustic","ruthless","sable","sad","safe","salty","same","sassy","satisfying","savory","scandalous","scarce","scared","scary","scattered","scientific","scintillating","scrawny","screeching","second","second-hand","secret","secretive","sedate","seemly","selective","selfish","separate","serious","shaggy","shaky","shallow","sharp","shiny","shivering","shocking","short","shrill","shut","shy","sick","silent","silent","silky","silly","simple","simplistic","sincere","six","skillful","skinny","sleepy","slim","slimy","slippery","sloppy","slow","small","smart","smelly","smiling","smoggy","smooth","sneaky","snobbish","snotty","soft","soggy","solid","somber","sophisticated","sordid","sore","sore","sour","sparkling","special","spectacular","spicy","spiffy","spiky","spiritual","spiteful","splendid","spooky","spotless","spotted","spotty","spurious","squalid","square","squealing","squeamish","staking","stale","standing","statuesque","steadfast","steady","steep","stereotyped","sticky","stiff","stimulating","stingy","stormy","straight","strange","striped","strong","stupendous","stupid","sturdy","subdued","subsequent","substantial","successful","succinct","sudden","sulky","super","superb","superficial","supreme","swanky","sweet","sweltering","swift","symptomatic","synonymous","taboo","tacit","tacky","talented","tall","tame","tan","tangible","tangy","tart","tasteful","tasteless","tasty","tawdry","tearful","tedious","teeny","teeny-tiny","telling","temporary","ten","tender tense","tense","tenuous","terrible","terrific","tested","testy","thankful","therapeutic","thick","thin","thinkable","third","thirsty","thoughtful","thoughtless","threatening","three","thundering","tidy","tight","tightfisted","tiny","tired","tiresome","toothsome","torpid","tough","towering","tranquil","trashy","tremendous","tricky","trite","troubled","truculent","true","truthful","two","typical","ubiquitous","ugliest","ugly","ultra","unable","unaccountable","unadvised","unarmed","unbecoming","unbiased","uncovered","understood","undesirable","unequal","unequaled","uneven","unhealthy","uninterested","unique","unkempt","unknown","unnatural","unruly","unsightly","unsuitable","untidy","unused","unusual","unwieldy","unwritten","upbeat","uppity","upset","uptight","used","useful","useless","utopian","utter","uttermost","vacuous","vagabond","vague","valuable","various","vast","vengeful","venomous","verdant","versed","victorious","vigorous","violent","violet","vivacious","voiceless","volatile","voracious","vulgar","wacky","waggish","waiting","","wakeful","wandering","wanting","warlike","warm","wary","wasteful","watery","weak","wealthy","weary","well-groomed","well-made","well-off","well-to-do","wet","whimsical","whispering","white","whole","wholesale","wicked","wide","wide-eyed","wiggly","wild","willing","windy","wiry","wise","wistful","witty","woebegone","womanly","wonderful","wooden","woozy","workable","worried","worthless","wrathful","wretched","wrong","wry","xenophobic","yellow","yielding","young","youthful","yummy","zany","zealous","zesty","zippy","zonked"];
 
 
-def horse_sim(multiplier):
-    return multiplier*random.random()
 
+# create a list of horses. The chance value is how many elements of that horse is added to the list
 def weighted_horse_list(horses):
     weighted_horse_list = []
     for horse in horses:
@@ -17,14 +16,17 @@ def weighted_horse_list(horses):
             weighted_horse_list.append(horse["name"])
     return weighted_horse_list
 
+# simple odds calculation, some variance is added to make the game a bit more interesting
 def odds_calculation(bet, horse_odds, weighted_horse_list):
     length = len(weighted_horse_list)
-    return int(bet*length/horse_odds)
+    variance = 0.5*(random.random() - 0.5)
+    return int(bet*variance+bet*length/horse_odds)
 
 
 def random_name():
     number = random.randint(0, len(names)-1)
     return names[number]
+
 
 def random_adjective():
     number = random.randint(0, len(adjectives)-1)
@@ -32,7 +34,7 @@ def random_adjective():
     adjective = adjective.title()
     return adjective
 
-
+# creates the list of horses
 def generate_horses(how_many):
     horses = []
     for i in range(0, how_many):
@@ -43,13 +45,32 @@ def generate_horses(how_many):
         horses.append(horse)
     return horses
 
-no_horses = ""
-while no_horses == "":
-    no_horses = int(input("How many horses in race? "))
-    if no_horses < 2:
-        print("has to be more than one horse dummy")
-        no_horses = ""
 
+# Horses that fell
+def fallen_horse(the_results, fallen = []):
+    # up to 6% will fall
+    results_length = len(the_results)
+    potential_fallers_min_index = int(0.6*results_length - 1)
+    for i in range(results_length - 1, potential_fallers_min_index, -1):
+        sim = random.random()
+        if sim < 0.5:
+            fallen.append(the_results[i])
+            the_results.remove(the_results[i])
+
+    return the_results, fallen
+
+def message(results, message):
+    index = random.randint(0, len(results)-1)
+    print("             ", results[index], message)
+    time.sleep(2)
+
+
+while True:
+    try:
+        no_horses = int(input("How many horses in race? "))
+        break
+    except ValueError:
+        print("Oops!  That was no valid number.  Try again...")
 
 horses = generate_horses(no_horses)
 
@@ -63,24 +84,51 @@ while money > 0:
 
     horses = generate_horses(no_horses)
 
-    bet = input("How much do you want to bet? ")
+    # asks the user how much to bet
+
+
+    while True:
+        try:
+            bet = input("How much do you want to bet? ")
+            break
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
+
     bet = int(bet)
+
+    # Line for if the user bet more than they have
     if bet > money:
+        time.sleep(1)
+        print("")
+        print("")
         print("That's more money than you have!")
+        time.sleep(2)
+        print("")
+        print("")
+        print("You feel like someone is watching you closely...")
+        time.sleep(3)
+
     print("")
     print("-----------------------------------------------------")
     print("You bet " + str(bet) + " coins")
     print("-----------------------------------------------------")
     print("")
 
+    
+
+
     weighted_horse = weighted_horse_list(horses)
     horse_names = []
     
+
+    # handles the payout value
     for horse in horses:
         horse_names.append(horse["name"])
         horse["payout"] = odds_calculation(bet, horse["odds"], weighted_horse)
-        
+
+
     i = 0
+    # some output to show the user the horses as a list.
     print("-----------------------------------------------------")
     for horse in horses:
         print("Number " + str(i + 1) + ", " + horse["name"] + " has chance " + str(horse["odds"]))
@@ -88,11 +136,26 @@ while money > 0:
         print("-----------------------------------------------------")
         i += 1
 
-    print("")
-    which_horse = input("Which horse do you want to bet on? ")
-    which_horse = int(which_horse) - 1
 
+    print("")
+
+
+    which_horse = 0
+    # user picks a horse
+    while 1 < which_horse or len(horses)-1 > which_horse:
+        try:
+            which_horse = input("Which horse do you want to bet on? ")
+            which_horse = int(which_horse) - 1
+
+            break
+        except ValueError:
+            print("Oops!  That was no valid number.  Try again...")
+
+    the_horse = horses[which_horse]
     results = []
+
+
+    # handles picking the winner.
 
     for i in range(0, len(weighted_horse)):
         index = random.randint(0, len(weighted_horse) - 1)
@@ -100,38 +163,19 @@ while money > 0:
         if horse not in results:
             results.append(horse)
 
+    results, fallen = fallen_horse(results)
     
-
-
-
-
-
-    
-
-
-    if which_horse > len(horses) - 1:
-        print("Horse number out of range")
-        continue
-    elif which_horse < 0:
-        print("Not lower than 0")
-        continue
-
     print("")
     print("")
     print("")
+
+
+    # some output here for the race
 
     print("-----------------------------------------------------")
-    print("You bet " + str(bet) + " coins on " + str(which_horse) + ", " + horses[which_horse]["name"] + ", Payout:", horses[which_horse]["payout"])
+    print("You bet " + str(bet) + " coins on " + str(which_horse+1) + ", " + horses[which_horse]["name"] + ", Payout:", horses[which_horse]["payout"])
     print("-----------------------------------------------------")
     time.sleep(1)
-
-
-
-
-
-
-
-
 
     print("")
     time.sleep(0.5)
@@ -147,16 +191,37 @@ while money > 0:
     print("")
     print("                 And they're off!")
     time.sleep(1)
-    print("                        .")
+    print("                        ")
+    message(results, "starts out strong!")
+    time.sleep(1)
+    print("")
+    print("")
     time.sleep(0.75)
-    print("                        ..")
-    time.sleep(1.5)
-    print("                        ...")
+    for i in range(0, int(len( fallen)/2), 1):
+        print("              Oh no!", fallen[i], "fell")
+        print("")
+        time.sleep(1)
 
-    time.sleep(2)
+    message(results, "takes the lead!")
+    print("")
+    for i in range(int(len( fallen)/2), len(fallen)):
+        print("              Oh no!", fallen[i], "fell")
+        print("")
+        time.sleep(1)
+    time.sleep(1)
+    print("")
+    time.sleep(1)
+    message(results, "brings up from the rear!")
+    print("")
+    print("                 Its neck and neck!")
+    print("")
     print("")
     print("                 We have a winner!")
     time.sleep(0.5)
+
+
+    # score board stuff.
+
     print("")
     print("")
     print("==================== SCORE BOARD ====================")
@@ -165,6 +230,11 @@ while money > 0:
         horse_name = results[i]
         place = i + 1
         print("              Position:", place, ":", horse_name)
+    time.sleep(1)
+    for i in range(0, len(fallen)):
+        horse_name = fallen[i]
+        print("                      DNF", ":", horse_name)
+
     print("=====================================================")
     print("")
     print("")
@@ -180,9 +250,22 @@ while money > 0:
     print("")
     print("")
     time.sleep(1.5)
+
+
+    
+
+
+    # handles paying out the user if they won or lost
     if horses[which_horse]["name"] == results[0]:
         print("                      You won!")
         time.sleep(1)
+        # A line if the user got luck when betting more than they have
+        if bet > money:
+            print("")
+            print("           You got lucky this time....")
+            print("")
+            time.sleep(2)     
+
         money += int(horses[which_horse]["payout"]) - bet
         money = int(money)
         print("                 You now have " + str(money) + " coins.")
@@ -194,7 +277,28 @@ while money > 0:
         money = int(money)
         print("                 You now have " + str(money) + " coins.")
         time.sleep(1)
+
+    # silly line for if the user bet more than they could afford and lost
     print("")
+    if money < 0:
+        print("                You start to feel dizzy.")
+        time.sleep(1)
+        print("                You are in serious debt...")
+        time.sleep(1.5)
+        print("                 You fall to the floor. ")
+        time.sleep(2)
+        print("the last thing you remember is a hooded man walking towards you.")
+        time.sleep(3.5)
+        print("                         .")
+        time.sleep(1)
+        print("                         ..")
+        time.sleep(1)
+        print("                         ...")
+        time.sleep(2)
+        print("         You wake up in an unfamiliar place.")
+        time.sleep(2)
+        print("         You stumble out, beaten and brusied.")
+        time.sleep(3)
     print("")
     print("")
     print("=====================================================")
