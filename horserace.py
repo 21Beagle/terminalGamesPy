@@ -17,10 +17,10 @@ def weighted_horse_list(horses):
     return weighted_horse_list
 
 # simple odds calculation, some variance is added to make the game a bit more interesting
-def odds_calculation(bet, horse_odds, weighted_horse_list):
+def odds_calculation( horse_odds, weighted_horse_list):
     length = len(weighted_horse_list)
     variance = 0.5*(random.random() - 0.5)
-    return int(bet*variance+bet*length/horse_odds)
+    return round(variance+length/horse_odds, 2)
 
 
 def random_name():
@@ -47,8 +47,9 @@ def generate_horses(how_many):
 
 
 # Horses that fell
-def fallen_horse(the_results, fallen = []):
+def fallen_horse(the_results):
     # up to 6% will fall
+    fallen = []
     results_length = len(the_results)
     potential_fallers_min_index = int(0.6*results_length - 1)
     for i in range(results_length - 1, potential_fallers_min_index, -1):
@@ -61,7 +62,7 @@ def fallen_horse(the_results, fallen = []):
 
 def message(results, message):
     index = random.randint(0, len(results)-1)
-    print("             ", results[index], message)
+    print("Commentator:", results[index], message)
     time.sleep(2)
 
 
@@ -72,240 +73,270 @@ while True:
     except ValueError:
         print("Oops!  That was no valid number.  Try again...")
 
-horses = generate_horses(no_horses)
 
 
-money = 100
-print("You have " + str(money) + " coins")
-
-
-while money > 0:
-    money = int(money)
-
+def game():
     horses = generate_horses(no_horses)
 
-    # asks the user how much to bet
+
+    money = 100
+
+    while money > 0:
+        money = int(money)
+
+        horses = generate_horses(no_horses)
+
+        # asks the user how much to bet
 
 
-    while True:
-        try:
-            bet = input("How much do you want to bet? ")
-            break
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
 
-    bet = int(bet)
 
-    # Line for if the user bet more than they have
-    if bet > money:
-        time.sleep(1)
+        weighted_horse = weighted_horse_list(horses)
+        horse_names = []
+        
+
+        # handles the payout value
+        for horse in horses:
+            horse_names.append(horse["name"])
+            horse["payout"] = odds_calculation(horse["odds"], weighted_horse)
+
+
+        i = 0
+        # some output to show the user the horses as a list.
+        print("-----------------------Horses-------------------------")
+        for horse in horses:
+            print("Number " + str(i + 1) + ", " + horse["name"] + " has chance " + str(horse["odds"]))
+            print("This horse pays out:", horse["payout"])
+            print("------------------------------------------------------")
+            i += 1
         print("")
+        print("You have " + str(money) + " coins")
         print("")
-        print("That's more money than you have!")
-        time.sleep(2)
-        print("")
-        print("")
-        print("You feel like someone is watching you closely...")
-        time.sleep(3)
+        while True:
+            try:
+                bet = input("How much do you want to bet? ")
+                bet = int(bet)
+                break
+            except ValueError:
+                print("Oops!  That was no valid number.  Try again...")
 
-    print("")
-    print("-----------------------------------------------------")
-    print("You bet " + str(bet) + " coins")
-    print("-----------------------------------------------------")
-    print("")
+        
 
-    
-
-
-    weighted_horse = weighted_horse_list(horses)
-    horse_names = []
-    
-
-    # handles the payout value
-    for horse in horses:
-        horse_names.append(horse["name"])
-        horse["payout"] = odds_calculation(bet, horse["odds"], weighted_horse)
-
-
-    i = 0
-    # some output to show the user the horses as a list.
-    print("-----------------------------------------------------")
-    for horse in horses:
-        print("Number " + str(i + 1) + ", " + horse["name"] + " has chance " + str(horse["odds"]))
-        print("This horse pays out:", horse["payout"])
-        print("-----------------------------------------------------")
-        i += 1
-
-
-    print("")
-
-
-    which_horse = 0
-    # user picks a horse
-    while 1 < which_horse or len(horses)-1 > which_horse:
-        try:
-            which_horse = input("Which horse do you want to bet on? ")
-            which_horse = int(which_horse) - 1
-
-            break
-        except ValueError:
-            print("Oops!  That was no valid number.  Try again...")
-
-    the_horse = horses[which_horse]
-    results = []
-
-
-    # handles picking the winner.
-
-    for i in range(0, len(weighted_horse)):
-        index = random.randint(0, len(weighted_horse) - 1)
-        horse = weighted_horse[index]
-        if horse not in results:
-            results.append(horse)
-
-    results, fallen = fallen_horse(results)
-    
-    print("")
-    print("")
-    print("")
-
-
-    # some output here for the race
-
-    print("-----------------------------------------------------")
-    print("You bet " + str(bet) + " coins on " + str(which_horse+1) + ", " + horses[which_horse]["name"] + ", Payout:", horses[which_horse]["payout"])
-    print("-----------------------------------------------------")
-    time.sleep(1)
-
-    print("")
-    time.sleep(0.5)
-    print("                        3!")
-    print("")
-    time.sleep(1)
-    print("                        2!")
-    print("")
-    time.sleep(1)
-    print("                        1!")
-    print("")
-    time.sleep(1)
-    print("")
-    print("                 And they're off!")
-    time.sleep(1)
-    print("                        ")
-    message(results, "starts out strong!")
-    time.sleep(1)
-    print("")
-    print("")
-    time.sleep(0.75)
-    for i in range(0, int(len( fallen)/2), 1):
-        print("              Oh no!", fallen[i], "fell")
-        print("")
-        time.sleep(1)
-
-    message(results, "takes the lead!")
-    print("")
-    for i in range(int(len( fallen)/2), len(fallen)):
-        print("              Oh no!", fallen[i], "fell")
-        print("")
-        time.sleep(1)
-    time.sleep(1)
-    print("")
-    time.sleep(1)
-    message(results, "brings up from the rear!")
-    print("")
-    print("                 Its neck and neck!")
-    print("")
-    print("")
-    print("                 We have a winner!")
-    time.sleep(0.5)
-
-
-    # score board stuff.
-
-    print("")
-    print("")
-    print("==================== SCORE BOARD ====================")
-    for i in range(0, len(results)):
-        time.sleep(1.2*random.random())
-        horse_name = results[i]
-        place = i + 1
-        print("              Position:", place, ":", horse_name)
-    time.sleep(1)
-    for i in range(0, len(fallen)):
-        horse_name = fallen[i]
-        print("                      DNF", ":", horse_name)
-
-    print("=====================================================")
-    print("")
-    print("")
-    print("")
-    time.sleep(0.75)
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    
-    which_horse = int(which_horse)    
-
-    print("             ", results[0] + " wins the race!")
-    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    print("")
-    print("")
-    print("")
-    time.sleep(1.5)
-
-
-    
-
-
-    # handles paying out the user if they won or lost
-    if horses[which_horse]["name"] == results[0]:
-        print("                      You won!")
-        time.sleep(1)
-        # A line if the user got luck when betting more than they have
+        # Line for if the user bet more than they have
         if bet > money:
+            time.sleep(2)
             print("")
-            print("           You got lucky this time....")
             print("")
-            time.sleep(2)     
+            print("You feel like someone is watching you closely...")
+            time.sleep(3)
 
-        money += int(horses[which_horse]["payout"]) - bet
-        money = int(money)
-        print("                 You now have " + str(money) + " coins.")
-        time.sleep(1)
-    else:
-        print("                      You lost!")
-        time.sleep(1)
-        money -= bet
-        money = int(money)
-        print("                 You now have " + str(money) + " coins.")
-        time.sleep(1)
+        print("")
+        print("------------------------------------------------------")
+        print("You bet " + str(bet) + " coins")
+        print("------------------------------------------------------")
+        print("")
 
-    # silly line for if the user bet more than they could afford and lost
-    print("")
-    if money < 0:
-        print("                You start to feel dizzy.")
-        time.sleep(1)
-        print("                You are in serious debt...")
-        time.sleep(1.5)
-        print("                 You fall to the floor. ")
-        time.sleep(2)
-        print("the last thing you remember is a hooded man walking towards you.")
-        time.sleep(3.5)
-        print("                         .")
-        time.sleep(1)
-        print("                         ..")
-        time.sleep(1)
-        print("                         ...")
-        time.sleep(2)
-        print("         You wake up in an unfamiliar place.")
-        time.sleep(2)
-        print("         You stumble out, beaten and brusied.")
+        
+
+
+        print("")
+
+
+        which_horse = 0
+        # user picks a horse
+        while 1 < which_horse or len(horses)-1 > which_horse:
+            try:
+                which_horse = input("Which horse do you want to bet on? ")
+                which_horse = int(which_horse) - 1
+                test_horse = horses[which_horse]
+                break
+            except IndexError:
+                print("Oops!  That was no valid number.  Try again...")
+
+        results = []
+
+        # handles picking the winner.
+
+        for i in range(0, len(weighted_horse)):
+            index = random.randint(0, len(weighted_horse) - 1)
+            horse = weighted_horse[index]
+            if horse not in results:
+                results.append(horse)
+
+        results, fallen = fallen_horse(results)
+        
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+
+        # some output here for the race
+
+        print("------------------------------------------------------")
+        print("You bet " + str(bet) + " coins on " + str(which_horse+1) + ", " + horses[which_horse]["name"] + ", Payout:", horses[which_horse]["payout"])
+        print("------------------------------------------------------")
+
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
         time.sleep(3)
-    print("")
-    print("")
-    print("=====================================================")
+        print("")
+        time.sleep(0.5)
+        print("                        3!")
+        print("")
+        time.sleep(1)
+        print("                        2!")
+        print("")
+        time.sleep(1)
+        print("                        1!")
+        print("")
+        time.sleep(1)
+        print("")
+        print("                 And they're off!")
+        time.sleep(1)
+        print("                        ")
+        message(results, "starts out strong!")
+        time.sleep(1)
+        print("")
+        print("")
+        time.sleep(0.75)
+        for i in range(0, int(len( fallen)/2), 1):
+            print("Commentator: Oh no!", fallen[i], "fell")
+            print("")
+            time.sleep(1)
+
+        message(results, "takes the lead!")
+        print("")
+        for i in range(int(len( fallen)/2), len(fallen)):
+            print("Commentator: Oh no!", fallen[i], "fell")
+            print("")
+            time.sleep(1)
+        time.sleep(1)
+        print("")
+        time.sleep(1)
+        message(results, "brings up from the rear!")
+        print("")
+        time.sleep(1)
+        print("Commentator: It's neck and neck!")
+        print("")
+        time.sleep(2)
+        print("")
+        print("Comentator: Over the line.")
+        time.sleep(0.5)
+        print("")
+        print("")
+        print("Commentator: It's a photo finish!")
+        time.sleep(1)
+        print("")
+        print("")
+        print("")
+        print("")
+        print("Commentator: The results are coming in now.")
+        time.sleep(2)
+
+        # score board stuff.
+
+        print("")
+        print("")
+        print("==================== SCORE BOARD =====================")
+        for i in range(0, len(results)):
+            time.sleep(1.2*random.random())
+            horse_name = results[i]
+            place = i + 1
+            print("              Position:", place, ":", horse_name)
+        for i in range(0, len(fallen)):
+            horse_name = fallen[i]
+            print("                      DNF", ":", horse_name)
+
+        print("======================================================")
+        print("")
+        print("")
+        print("")
+        time.sleep(0.75)
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        
+        which_horse = int(which_horse)    
+
+        print("             ", results[0] + " wins the race!")
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print("")
+        print("")
+        print("")
+        time.sleep(1.5)
 
 
+        
 
 
-print("                     Game over!")
-time.sleep(100)
+        # handles paying out the user if they won or lost
+        if horses[which_horse]["name"] == results[0]:
+            print("                      You won!")
+            time.sleep(1)
+            # A line if the user got luck when betting more than they have
+            if bet > money:
+                print("")
+                print("           You got lucky this time....")
+                print("")
+                time.sleep(2)     
 
+            money += int(bet*horses[which_horse]["payout"]) - bet
+            money = int(money)
+            print("                 You now have " + str(money) + " coins.")
+            time.sleep(1)
+        else:
+            print("                      You lost!")
+            time.sleep(1)
+            money -= bet
+            money = int(money)
+            print("                 You now have " + str(money) + " coins.")
+            time.sleep(1)
+
+        # silly line for if the user bet more than they could afford and lost
+        print("")
+        if money < 0:
+            print("                You start to feel dizzy.")
+            time.sleep(1)
+            print("                You are in serious debt...")
+            time.sleep(1.5)
+            print("                 You fall to the floor. ")
+            time.sleep(2)
+            print("the last thing you remember is a hooded man walking towards you.")
+            time.sleep(3.5)
+            print("                         .")
+            time.sleep(1)
+            print("                         ..")
+            time.sleep(1)
+            print("                         ...")
+            time.sleep(2)
+            print("         You wake up in an unfamiliar place.")
+            time.sleep(2)
+            print("         You stumble out, beaten and brusied.")
+            time.sleep(3)
+        print("")
+        print("")
+        print("======================================================")
+    print("                     Game over!")
+
+    playagain = ""
+    while playagain == "":
+        playagain = input("Would you like to play again y/n")
+        if playagain == "y":
+            game()
+        else:
+            print("Good Bye!")
+            time.sleep(300)
+
+
+game()
