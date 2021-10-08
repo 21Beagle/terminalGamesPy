@@ -10,7 +10,7 @@ clear()
 
 
 slot_values = ['A', 'K', 'Q', 'J', 'T', '9', '8', '6', '5', '4', '3', '2']
-colours = ['red', 'white', 'blue', 'green']
+colours = ['red', 'yellow', 'blue', 'green']
 
 slot_values_length = len(slot_values)
 slot_values_weighted = []
@@ -39,7 +39,7 @@ def get_line(number_of_columns = 5, slot_values = slot_values):
         result.append(slot_values[index])
     return result
 
-def get_new_board(rows = 17, columns = 5):
+def get_new_board(rows = 60, columns = 5):
     results_board.clear()
     for i in range(0, rows):
         results = get_line(columns)
@@ -53,51 +53,95 @@ big_columns = len(big_board[big_rows-1])
 def get_row(row_number, big_board = big_board):
     big_rows = len(big_board)
     big_columns = len(big_board[big_rows-1])
+    output_string = " ╔═══╦═══╦═══╦═══╦═══╗\n"
+#1
+    output_string += " ║ "
+    for j in range(big_columns):
+        if j % 2 == 0:
+            y = row_number - 2
+            x = j
+            output_string += big_board[y][x] + " ║ "
 
-
-    output_string = ""
+        if j % 2 != 0:
+            y = big_rows - row_number - 4
+            x = j 
+            output_string += big_board[y][x]  + " ║ "
+    
+    output_string += "\n ║ "
+#2
+    for j in range(big_columns):
+        if j % 2 == 0:
+            y = row_number - 1
+            x = j
+            output_string += big_board[y][x] + " ║ "
+        if j % 2 != 0:
+            y = big_rows - row_number - 3
+            x = j 
+            output_string += big_board[y][x]  + " ║ "
+    output_string += "\n ║ "
+#3
     for j in range(big_columns):
         if j % 2 == 0:
             y = row_number
             x = j
-            output_string += big_board[y][x] + " "
+            output_string += big_board[y][x] + " ║ "
         if j % 2 != 0:
             y = big_rows - row_number - 2
             x = j 
-            output_string += big_board[y][x]  + " "
-    output_string += "\n"
+            output_string += big_board[y][x]  + " ║ "
+
+    
+    output_string += "\n ║ "
+#4
     for j in range(big_columns):
         if j % 2 == 0:
             y = row_number + 1
             x = j
-            output_string += big_board[y][x] + " "
+            output_string += big_board[y][x] + " ║ "
         if j % 2 != 0:
             y = big_rows - row_number - 1
             x = j
-            output_string += big_board[y][x]  + " "
-    output_string += "\n"
+            output_string += big_board[y][x]  + " ║ "
+    output_string += "\n ║ "
+#5
     for j in range(big_columns):
         if j % 2 == 0:
             y = row_number + 2
             x = j
-            output_string += big_board[y][x] + " "
+            output_string += big_board[y][x] + " ║ "
         if j % 2 != 0:
             y = big_rows - row_number 
             x = j
-            output_string += big_board[y][x]  + " "
-    output_string += "\n"
-    
+            output_string += big_board[y][x]  + " ║ "
+    output_string += "\n ╚═══╩═══╩═══╩═══╩═══╝"
+
     return output_string
 
 
+def spin():
+    timer = 0.05
+    for i in range(3, 30):
+        board = get_row(i-1)
+        print(board)
+        time.sleep(timer)
+        clear()
 
-timer = 0.05
-for i in range(3, big_rows-1):
-    board = ""
-    board += get_row(i-1)
-    print(board)
-    time.sleep(timer)
-    timer += 0.1
-    clear()
+    for i in range(30, 46):
+        board = get_row(i-1)
+        print(board)
+        time.sleep(timer)
+        timer += 0.03
+        if i < 45:
+            clear()
+        else:
+            time.sleep(2)
+            final_board = get_row(44)
+            print("       !You won!")
+            break
 
+    print(final_board)
+
+
+spin()
+time.sleep(10)
 
