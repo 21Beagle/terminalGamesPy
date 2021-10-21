@@ -24,7 +24,6 @@ class Card(object):
         self.suit = suit(colour)
 
     def show(self):
-        print(self.face)
         return self.face
 
 
@@ -53,6 +52,11 @@ class Deck:
     def draw_card(self):
         return self.cards.pop()
 
+    def return_card(self, player):
+        self.cards.append(player.return_card())
+
+
+
 
 class Player:
     def __init__(self, name):
@@ -67,6 +71,22 @@ class Player:
         for card in self.hand:
             card.show()
 
+    def return_card(self):
+        return self.hand.pop()   
+
+def pair_check(hand):
+    last_card = len(hand)
+    pairs = []
+    for i in range(last_card):
+        for j in range(i+1, last_card):
+            if hand[i].value == hand[j].value:
+                pairs.append([hand[i].face, hand[j].face])
+
+    how_many = len(pairs)
+    print(how_many)
+    return how_many
+    
+
 
 
 
@@ -77,12 +97,31 @@ deck.shuffle()
 jack = Player("Jack")
 bob = Player("Bob")
 
-for i in range(5):
-    jack.draw(deck)
-    bob.draw(deck)
+for j in range(10000):
+    deck.shuffle()
 
-jack.show_hand()
-print("")
-bob.show_hand()
+    jack_hand = ""
+    bob_hand = ""
+    for i in range(5):
+        jack.draw(deck)
+        bob.draw(deck)
+    for i in range(5):
+        jack_hand+=jack.hand[i].face + " "
+        bob_hand+=bob.hand[i].face + " "  
+    print(jack_hand)
+    pair_check(jack.hand)
+    print(bob_hand)
+    pair_check(bob.hand)
+    for i in range(5):
+        deck.return_card(jack)
+        deck.return_card(bob)
 
+
+
+
+
+
+
+
+time.sleep(10000)
 
