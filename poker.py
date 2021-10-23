@@ -223,11 +223,10 @@ bob = Player("Bob")
 money = 100
 play = ""
 bet = 3
-while money > 0 and not play:
+
+while money > 0:
     deck.shuffle()
-    print("Money:", money)
-    print("Enter value to quit")
-    play = input("Quit?")
+    
 
 
     for i in range(5):
@@ -238,6 +237,7 @@ while money > 0 and not play:
     swap_str = ""
 
     for i in range(5):
+        print("Money:", money)
         clear()
         print("Leave blank to not swap card")
         print(jack.show_hand())
@@ -247,6 +247,7 @@ while money > 0 and not play:
     jack.swap_cards(swap_str)
     jack.show_hand()
     clear()
+    print("Money:", money)
     print("Your hand:",jack.show_hand(), jack.value_hand())
     print("")
     print("Bob's hand:", bob.show_hand(), bob.value_hand())
@@ -257,17 +258,23 @@ while money > 0 and not play:
 
     if jack_value == bob_value:
         print("Draw, bet returned")
+        print("Money:", money)
     elif jack_value > bob_value:
-        gain = bet * jack_value + bet
+        gain = bet * int(jack_value/bob_value) + bet
         money += gain
         print("You win", gain, "coins!")
+        print("Money:", money)
     else:
-        money -= bet
-        print("You lose 3 coins.")
+        loss = bet * int(bob_value/jack_value) + bet
+        money -= loss
+        print("You lose", loss, "coins.")
+        print("Money:", money)
 
     for i in range(5):
         deck.return_card(jack, 0)
         deck.return_card(bob, 0)
+
+    quit = input("")
 
 
    
