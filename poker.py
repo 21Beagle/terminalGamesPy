@@ -1,6 +1,9 @@
 import random
 import time
 from termcolor import colored
+import os
+def clear(): os.system('cls') #on Windows System
+clear()
 
 colours = ['red', 'yellow', 'blue', 'green']
 
@@ -53,7 +56,7 @@ class Deck:
         return self.cards.pop()
 
     def return_card(self, player, card):
-        self.cards.append(player.return_card(card))
+        self.cards.insert(0, player.return_card(card))
 
 
 class Player:
@@ -70,13 +73,27 @@ class Player:
         hand_str = ""
         for i in range(hand_length):
             hand_str +=self.hand[i].face + " "
-        print(hand_str)
+        return(hand_str)
 
     def return_card(self, index):
         return self.hand.pop(index)  
 
     def value_hand(self):
-        return hand_value(self.hand) 
+        return hand_value(self.hand)
+
+    def swap_cards(self, swap_str):
+        number_swap = len(swap_str)
+        list_swap = []
+        for i in range(number_swap):
+            number = swap_str[i]
+            number = int(number)
+            list_swap.append(number)
+
+        list_swap.sort()
+
+        for i in range(number_swap - 1, -1, -1):
+            deck.return_card(self, list_swap[i])
+            self.hand.append(deck.draw_card())
 
 
 def duplicates_check(hand):
@@ -167,7 +184,32 @@ def hand_value(hand):
     if straight == True:
         return "Straight"
     return pairs_value(hand)
+
+def hand_value_num(label):
+    if label == "High Card":
+        output = 2
+    elif label == "Pair":
+        output = 5
+    elif label == "Two pair":
+        output = 20
+    elif label == "Three of a kind":
+        output = 50
+    elif label == "Straight":
+        output = 250
+    elif label == "Flush":
+        output = 500
+    elif label == "Full house":
+        output = 750
+    elif label == "Four of a kind":
+        output = 4000
+    elif label == "Straight Flush":
+        output = 100000
+    elif label == "Royale Flush":
+        output = 7000000
+    return output
+
     
+
 
 
 
@@ -175,42 +217,59 @@ deck = Deck()
 deck.shuffle()
 
 jack = Player("Jack")
+bob = Player("Bob")
 
 
 money = 100
-while money > 0:
-
-    print("Money:", money)
-
-    bet = input("how much to bet?")
-    for i in range(5):
-        jack.draw(deck) 
-    jack.show_hand()
-
-    swap_str = input("what cards to swap?")
-    number_swap = len(swap_str)
-    list_swap = []
-    for i in range(number_swap):
-        number = swap_str[i]
-        number = int(number)
-        list_swap.append(number)
-
-    list_swap.sort()
-
-    for i in range(number_swap - 1, -1, -1):
-        jack.return_card(list_swap[i])
-        jack.draw(deck)
-
-    jack.show_hand()
-    print(jack.value_hand())
-
-    for i in range(5):
-        jack.return_card(0)
-
-for j in range(10000000):
+play = ""
+bet = 3
+while money > 0 and not play:
     deck.shuffle()
+    print("Money:", money)
+    print("Enter value to quit")
+    play = input("Quit?")
 
-    jack_hand = ""
+
+    for i in range(5):
+        jack.draw(deck)
+        bob.draw(deck)
+    jack.show_hand()
+
+    swap_str = ""
+
+    for i in range(5):
+        clear()
+        print("Leave blank to not swap card")
+        print(jack.show_hand())
+        card = input("Swap card? " + jack.hand[i].face + " ")
+        if card:
+            swap_str += str(i)
+    jack.swap_cards(swap_str)
+    jack.show_hand()
+    clear()
+    print("Your hand:",jack.show_hand(), jack.value_hand())
+    print("")
+    print("Bob's hand:", bob.show_hand(), bob.value_hand())
+
+    print("")
+    jack_value = hand_value_num(jack.value_hand())
+    bob_value = hand_value_num(bob.value_hand())
+
+    if jack_value == bob_value:
+        print("Draw, bet returned")
+    elif jack_value > bob_value:
+        gain = bet * jack_value + bet
+        money += gain
+        print("You win", gain, "coins!")
+    else:
+        money -= bet
+        print("You lose 3 coins.")
+
+    for i in range(5):
+        deck.return_card(jack, 0)
+        deck.return_card(bob, 0)
+
+
    
 
 
