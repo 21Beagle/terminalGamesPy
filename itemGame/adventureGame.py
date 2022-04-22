@@ -19,6 +19,12 @@ def choose(array):
         return array[randint(0, len(array) - 1)]
 
 
+def choose_with_removal(array):
+    element = choose(array)
+    array.remove(element)
+    return element
+
+
 class Rarity:
     def __init__(self, name, color, value):
         self.name = name
@@ -117,16 +123,21 @@ class NPC:
         self.verbpt = choose(verbspt)
         self._first_name = choose(names)
         self._last_name = choose(names)
-        self._name = (
+        self._title = (
             self._first_name + " " + self._last_name + ", the " + self.adjective
         )
+
+        self._name = self._first_name + " " + self._last_name
+
+        self.title = colored(self._title.title(), "blue", attrs=["bold"])
         self.name = colored(self._name.title(), "blue")
+
         self.backpack = Backpack()
         self._money = int(money)
         self.money = colored(money, "yellow", attrs=["bold"])
 
     def introduce(self):
-        print(choose(hello) + ", I am " + self.name + ".")
+        print(choose(hello) + ", I am " + self.title + ".")
 
     def shop(self):
         if len(self.backpack.items) == 0:
@@ -137,39 +148,47 @@ class NPC:
             self.backpack.print_contents()
             print("")
             print(self.name + ": How may I help you?")
+            print("")
 
     def add_item(self, item):
         self.backpack.add(item)
 
 
 class City:
-    def __init__(self, options=[]):
+    def __init__(self):
         self._name = choose(cities)
         self.name = colored(self._name.title(), "yellow", attrs=["bold"])
-        self.options = options
         self.NPCS = [NPC(randint(1, 100)) for i in range(randint(1, 5))]
 
+    def travel(self, player_name, winning_item):
+        travel_text = ""
+        travel_text += player_name + " "
+        travel_text += choose(adjectively)
+        travel_text += " " + choose(verbspt)
+        travel_text += " to "
+        travel_text += self.name
+        travel_text += " in search of a "
+        travel_text += winning_item + "."
+        time_passes()
+        print(travel_text)
+        time_passes()
 
-def travel_text(player_name, city_name, winning_item_name):
 
-    travel_text = ""
-    travel_text += player_name + " "
-    travel_text += choose(adjectively)
-    travel_text += " " + choose(verbspt)
-    travel_text += " to "
-    travel_text += city_name
-    travel_text += " in search of a "
-    travel_text += winning_item_name + "."
-    print(travel_text)
+class Option:
+    def __init__(self, text, action):
+        self.text = text
+        self.action = action
 
 
 def time_passes():
+    print("")
     sleep(2)
     print(".")
     sleep(0.5)
     print("..")
     sleep(0.5)
     print("...")
+    print("")
     sleep(1)
 
 
@@ -190,12 +209,6 @@ def quest_text(player):
     pass
 
 
-def choose_with_removal(array):
-    item = choose(array)
-    array.remove(item)
-    return item
-
-
 def generate_cities(number):
     cities = []
     for i in range(number):
@@ -208,43 +221,66 @@ winning_item = possible_items[0]
 prize_item = choose_with_removal(possible_items)
 cities_list = generate_cities(randint(4, 8))
 
-while possible_items != []:
-    city = choose(cities_list)
-    npc = choose(city.NPCS)
-    item = choose_with_removal(possible_items)
-    npc.add_item(item)
+print("Welcome to the game!")
+name = input("What is your name? ")
+player = Player(name, 100)
 
-for city in cities_list:
-    for npc in city.NPCS:
-        npc.introduce()
-        npc.shop()
+while possible_items != []:
+    item = choose_with_removal(possible_items)
+    if randint(1, 5) == 1:
+        player.backpack.add(item)
+    else:
+        city = choose(cities_list)
+        npc = choose(city.NPCS)
+        npc.add_item(item)
+
+
+def travel(cities):
+    print("Where would you like to travel to?")
+    index = 0
+    for city in cities:
+        print(str(index) + ". " + city.name)
+        index += 1
+    option_number = input("Choose an city: ")
+    option_number = int(option_number)
+    cities[option_number].travel(player.name, winning_item.name)
+
+
+sleep(2)
+print("Hello", player.name + ", odd name you have.")
+
+item_guy = NPC(0)
 
 
 def intro():
-
-    print("Welcome to the game!")
-    name = input("What is your name? ")
-    player = Player(name, 100)
-
-    sleep(2)
-    print("Hello", player.name + ", odd name you have there.")
-
-    item_guy = NPC(0)
-
     time_passes()
     print("Then we shall begin.")
     time_passes()
 
-    print(player.name + " wakes up in a smokey room.")
+    print(player.name + " woke up in a smokey room.")
     print("It is dark and cold.")
     print("A figure approaches " + player.name + ".")
-    print("My name is " + item_guy.name + ".")
-    print("I need an", winning_item.name, "for a collection.")
-    print("I will give you a", prize_item.name, "if you can find me one.")
-    print("Please find me a " + winning_item.name + ".")
-    print("You will be rewarded...")
+    print("")
+    print("My name is " + item_guy.title + ".")
+    print(item_guy.name + ": I need an", winning_item.name, "for a collection.")
+    print(
+        item_guy.name + ": I will give you a",
+        prize_item.name,
+        "if you can find me one.",
+    )
+    print(item_guy.name + ": Please find me a " + winning_item.name + ".")
 
     time_passes()
+
+
+def main_menu(player):
+    print("1: Travel to a city")
+
+    answer = input("What should " + player.name + " do? ")
+    answer = int(answer)
+
+    if answer == 1:
+        travel(cities_list)
 
 
 def game():
@@ -252,3 +288,6 @@ def game():
 
 
 intro()
+game_running = True
+while game_running == True:
+    main_menu(player)
